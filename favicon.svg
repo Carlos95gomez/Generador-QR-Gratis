@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <!-- Patrón base estilo QR -->
+  <rect width="32" height="32" fill="#ffffff"/>
+  
+  <!-- Patrones de posición (esquinas) -->
+  <rect x="2" y="2" width="7" height="7" fill="#000000"/>
+  <rect x="23" y="2" width="7" height="7" fill="#000000"/>
+  <rect x="2" y="23" width="7" height="7" fill="#000000"/>
+  
+  <!-- Patrón de alineación (centro) -->
+  <rect x="12" y="12" width="3" height="3" fill="#000000"/>
+  
+  <!-- Módulos de datos (estilo QR simplificado) -->
+  <rect x="16" y="2" width="3" height="3" fill="#000000"/>
+  <rect x="22" y="8" width="3" height="3" fill="#000000"/>
+  <rect x="8" y="16" width="3" height="3" fill="#000000"/>
+  <rect x="2" y="12" width="3" height="3" fill="#000000"/>
+  <rect x="26" y="20" width="3" height="3" fill="#000000"/>
+</svg>

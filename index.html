@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generador de Códigos QR Estilizados</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="alternate icon" href="favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    
+</head>
+<body>
+    <header class="cabecera">
+        <h1>Generador de QR</h1>
+        <nav>
+            <ul class="menu-navegacion">
+                <button onclick="openModal()">Acerca de</button>
+            </ul>
+        </nav>
+    </header>
+    <div id="acercaDe" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h3>Acerca del Generador QR</h3>
+            
+            <p>Esta herramienta permite crear códigos QR personalizables con diferentes colores, niveles de corrección de errores y opciones de descarga.</p>
+            
+            <h4>Características principales:</h4>
+            <ul>
+                <li>Personalización de colores del QR y fondo</li>
+                <li>4 niveles de corrección de errores</li>
+            </ul>
+    
+            <h4>Tecnologías utilizadas:</h4>
+            <ul>
+                <li><strong>HTML5</strong>: Estructura base de la página web</li>
+                <li><strong>CSS3</strong>: Diseño, disposición visual y responsive</li>
+                <li><strong>JavaScript Vanilla</strong>: Lógica y funcionalidad dinámica</li>
+                <li><strong>QRCode.js</strong>: Biblioteca para generación dinámica de códigos QR</li>
+                <li><strong>Font Awesome</strong>: Iconos y elementos gráficos</li>
+                <li><strong>SVG</strong>: Favicon personalizado y elementos vectoriales</li>
+                <li><strong>Canvas API</strong>: Generación de imágenes descargables</li>
+            </ul>
+        </div>
+    </div>
+
+    <main class="contenido-principal">
+        <div class="contenedor-entrada">
+            <input type="text" id="url" placeholder="Ingresa una URL (ejemplo: https://miwebsite.com)">
+        </div>
+        <div class="controles">
+            <div class="selector-color">
+                <label>Color QR:</label>
+                <input type="color" id="colorQR" value="#000000">
+            </div>
+            <div class="selector-color">
+                <label>Color Fondo:</label>
+                <input type="color" id="colorFondo" value="#ffffff">
+            </div>
+            <div>
+                <label>Nivel de corrección:</label>
+                <select id="nivelError">
+                    <option value="L">Bajo (menos puntos)</option>
+                    <option value="M">Medio</option>
+                    <option value="Q">Cuarto</option>
+                    <option value="H">Alto (más seguro)</option>
+                </select>
+            </div>
+            <button onclick="generarQR()">Generar QR</button>
+        </div>
+        <div id="contenedor-qr">
+            <div id="codigoQR"></div>
+            <div class="botones-accion">
+                <button class="boton-descarga" onclick="descargarQR()">
+                    <i data-lucide="download"></i>
+                    Descargar QR
+                </button>
+                <button class="boton-imprimir" onclick="imprimirQR()">
+                    <i data-lucide="printer"></i>
+                    Imprimir QR
+                </button>
+            </div>
+        </div>
+    </main>
+
+    <footer class="pie-pagina">
+        <div class="redes-sociales">
+            <a href="https://github.com/Carlos95gomez" target="_blank" class="red-social">
+                <i class="fab fa-github"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/carlos-arevalo-488438258" target="_blank" class="red-social">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="https://www.facebook.com/profile.php?id=61572410000879" target="_blank" class="red-social">
+                <i class="fab fa-facebook"></i>
+            </a>
+        </div>
+        <p class="copyright">
+            <span>Creado por Carlos Arévalo © 2025</span> - 
+            <a href="LICENSE" target="_blank" rel="license" class="licencia">MIT License</a>
+        </p>
+    </footer>
+
+    <script src="funciones.js"></script>
+</body>
+</html>
